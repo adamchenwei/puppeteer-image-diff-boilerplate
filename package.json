@@ -4,7 +4,7 @@
   "description": "puppeteer-image-diff-boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/adamchenwei/puppeteer-image-diff-boilerplate/issues"
   },
-  "homepage": "https://github.com/adamchenwei/puppeteer-image-diff-boilerplate#readme"
+  "homepage": "https://github.com/adamchenwei/puppeteer-image-diff-boilerplate#readme",
+  "devDependencies": {
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "jest-image-snapshot": "^2.8.1",
+    "puppeteer": "^1.14.0"
+  }
 }
