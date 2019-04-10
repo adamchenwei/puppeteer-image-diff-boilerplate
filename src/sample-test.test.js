@@ -26,10 +26,11 @@ describe('create account page test', () => {
 
   it('show correct page: variant and filled with name', async () => {
     const page = await browser.newPage();
+
     await page.goto(
-      'http://localhost:8080/app/register?experimentName=2018_12_STREAMLINED_ACCOUNT&experimentVariation=STREAMLINED#/'
+      `${siteDomain}/app/register?experimentName=2018_12_STREAMLINED_ACCOUNT&experimentVariation=STREAMLINED#/`
     );
-    await page.waitForSelector('input[name=name]');
+
     await page.click('input[automation=name]');
     await page.type('input[automation=name]', 'Adam Chen Wei');
 
