@@ -1,4 +1,9 @@
 const puppeteer = require('puppeteer');
+const getSiteDomainFromEnv = require('./utils/getSiteDomainFromEnv');
+
+siteDomain = getSiteDomainFromEnv(process.env);
+
+console.log('Site Domain: ', siteDomain);
 
 describe('create account page test', () => {
   let browser;
@@ -25,8 +30,14 @@ describe('create account page test', () => {
       'http://localhost:8080/app/register?experimentName=2018_12_STREAMLINED_ACCOUNT&experimentVariation=STREAMLINED#/'
     );
     await page.waitForSelector('input[name=name]');
-    await page.click('input[name=name]');
-    await page.type('input[name=name]', 'adamchenwei@gmail.com');
+    await page.click('input[automation=name]');
+    await page.type('input[automation=name]', 'Adam Chen Wei');
+
+    await page.click('input[automation=username]');
+    await page.type('input[automation=username]', 'adamchenwei.tester@gmail.com');
+
+    await page.click('input[automation=password]');
+    await page.type('input[automation=password]', 'adamchenwei.tester@gmail.com');
     // await page
     //   .waitForXPath("//input[@id='name']")
     //   .then(dom => {

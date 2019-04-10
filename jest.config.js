@@ -21,12 +21,12 @@ module.exports = {
   },
   testPathIgnorePatterns: ['<rootDir>[/\\\\](\\.cache|node_modules)[/\\\\]'],
   // transformIgnorePatterns: ['/node_modules/(?!(@chewy/design-system))'],
-  coverageThreshold: {
-    global: {
-      branches: 5,
-      functions: 8,
-      lines: 10,
-      statements: 37.44
-    }
-  }
+  // coverageThreshold: {
+  //   global: {
+  //     branches: 5,
+  //     functions: 8,
+  //     lines: 10,
+  //     statements: 37.44
+  //   }
+  // }
 };
